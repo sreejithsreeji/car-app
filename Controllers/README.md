@@ -15,15 +15,15 @@ docker-compose version 1.21.0, build 5920eb0
     make up
 This will start the server in **localhost:3000**
 #### Sample Request
-    http://localhost:3000/api/v1/cars/sort?k1=model
+    http://localhost:3000/api/v1/cars/sort-by?k1=model
 
-    http://localhost:3000/api/v1/cars/sort?k1=model&k2=brand
+    http://localhost:3000/api/v1/cars/sort-by?k1=model&k2=brand
 
-    http://localhost:3000/api/v1/cars/sort?k1=model&k2=brand&k3=trim
+    http://localhost:3000/api/v1/cars/sort-by?k1=model&k2=brand&k3=trim
 
-    http://localhost:3000/api/v1/cars/sort?k1=model&limit=10
+    http://localhost:3000/api/v1/cars/sort-by?k1=model&limit=10
 
-    http://localhost:3000/api/v1/cars/sort?k1=model&limit=10&page=1
+    http://localhost:3000/api/v1/cars/sort-by?k1=model&limit=10&page=1
 
 
 
