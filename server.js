@@ -3,10 +3,12 @@ const http=require('http');
 const app=express();
 const server=http.createServer(app);
 require('dotenv').config();
+
 const dbConnection=require('./dbconfig.js');
 
 //middlewares
-
+const cors=require('cors');
+app.use(cors());
 const morgon=require('morgan');
 app.use(morgon('dev'))
 

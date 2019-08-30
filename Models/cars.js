@@ -1,14 +1,13 @@
 
 
 const sort= (dbInstance,filterOpts,onePageLength=10,pageNumber=1)=>{
-    
     return new Promise((resolve,reject)=>{
         dbInstance.collection('vehicles')
         .aggregate([
             {$sort:filterOpts}
         ])
         .skip((parseInt(pageNumber||1)-1)*onePageLength)
-        .limit(onePageLength)
+        .limit(parseInt(onePageLength))
         .toArray((err,data)=>{
             if(err) reject(err);
             resolve({
@@ -26,7 +25,6 @@ const sort= (dbInstance,filterOpts,onePageLength=10,pageNumber=1)=>{
 }
 
 const get=(dbInstance,maxPerPage=10,page=1)=>{
-    
     return new Promise((resolve,reject)=>{
         dbInstance.collection('vehicles')
         .find()
